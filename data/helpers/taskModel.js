@@ -2,7 +2,7 @@ const db = require("../db-config.js");
 module.exports = {
   find,
   findById,
-  //findProjects,
+  findProject,
   add,
   update,
   remove,
@@ -28,6 +28,19 @@ function find() {
 
 function findById(id) {
   return db("tasks").where({ id }).first();
+}
+
+function findProject(id) {
+  return db("tasks as t")
+    .join("projects as p", "t.project_id", "p.id")
+    .select(
+      "p.project_name as project_name",
+      "t.id as task_id",
+      "t.description as task_description",
+      "t.notes as task_notes",
+      "t.completed as task_completed"
+    )
+    .where("t.id", id);
 }
 
 function add(task) {

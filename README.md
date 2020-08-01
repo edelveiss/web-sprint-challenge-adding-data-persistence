@@ -117,3 +117,27 @@ Follow these steps for completing your project.
 - [ ] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's Repo). **Please don't merge your own pull request**
 - [ ] Add your team lead as a reviewer on the pull-request
 - [ ] Your team lead will count the project as complete after receiving your pull-request
+
+EndPoints:
+GET
+localhost:5000/api/projects
+localhost:5000/api/projects/2
+localhost:5000/api/projects/4/tasks
+localhost:5000/api/projects/4/resources
+localhost:5000/api/resources
+localhost:5000/api/resources/2
+localhost:5000/api/resources/1/projects
+localhost:5000/api/tasks
+localhost:5000/api/tasks/2
+localhost:5000/api/tasks/2/project
+POST
+localhost:5000/api/projects
+localhost:5000/api/projects/1/tasks
+localhost:5000/api/resources
+PUT
+localhost:5000/api/projects/1
+localhost:5000/api/tasks/1
+localhost:5000/api/resources/1
+DELETE
+localhost:5000/api/projects/1
+localhost:5000/api/tasks/2
