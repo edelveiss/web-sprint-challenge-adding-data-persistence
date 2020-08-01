@@ -48,11 +48,21 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. Explain the difference between `Relational Databases` and `SQL`.
 
+- An RDBMS is a Relational Database Management System. It is the database software itself, which manages storage, querying, updating, and, well, everything.
+- SQL, the Structured Query Language, is a language which is typically used to query the RDBMS.
+
 2. Why do tables need a `primary key`?
+
+A primary key is used to ensure data in the specific column is unique. You can only set constraints with primary keys, by setting a foreign key to another column which creates a relationship with the column that has the primary key set.
 
 3. What is the name given to a table column that references the primary key on another table.
 
+The name is a foreign key. Foreign key is a column that creates a relationship between two tables. The purpose of Foreign keys is to maintain data integrity and allow navigation between two different instances of an entity.
+
 4. What do we need in order to have a _many to many_ relationship between two tables.
+
+We use a concept called a joining table or a bridging table.
+A joining table is a table that sits between the two other tables of a many-to-many relationship. Its purpose is to store a record for each of the combinations of these other two tables.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
