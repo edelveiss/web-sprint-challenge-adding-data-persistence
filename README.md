@@ -48,11 +48,21 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. Explain the difference between `Relational Databases` and `SQL`.
 
+- An RDBMS is a Relational Database Management System. It is the database software itself, which manages storage, querying, updating, and, well, everything.
+- SQL, the Structured Query Language, is a language which is typically used to query the RDBMS.
+
 2. Why do tables need a `primary key`?
+
+A primary key is used to ensure data in the specific column is unique. You can only set constraints with primary keys, by setting a foreign key to another column which creates a relationship with the column that has the primary key set.
 
 3. What is the name given to a table column that references the primary key on another table.
 
+The name is a foreign key. Foreign key is a column that creates a relationship between two tables. The purpose of Foreign keys is to maintain data integrity and allow navigation between two different instances of an entity.
+
 4. What do we need in order to have a _many to many_ relationship between two tables.
+
+We use a concept called a joining table or a bridging table.
+A joining table is a table that sits between the two other tables of a many-to-many relationship. Its purpose is to store a record for each of the combinations of these other two tables.
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
@@ -107,3 +117,27 @@ Follow these steps for completing your project.
 - [ ] Submit a Pull-Request to merge <firstName-lastName> Branch into master (student's Repo). **Please don't merge your own pull request**
 - [ ] Add your team lead as a reviewer on the pull-request
 - [ ] Your team lead will count the project as complete after receiving your pull-request
+
+EndPoints:
+GET
+localhost:5000/api/projects
+localhost:5000/api/projects/2
+localhost:5000/api/projects/4/tasks
+localhost:5000/api/projects/4/resources
+localhost:5000/api/resources
+localhost:5000/api/resources/2
+localhost:5000/api/resources/1/projects
+localhost:5000/api/tasks
+localhost:5000/api/tasks/2
+localhost:5000/api/tasks/2/project
+POST
+localhost:5000/api/projects
+localhost:5000/api/projects/1/tasks
+localhost:5000/api/resources
+PUT
+localhost:5000/api/projects/1
+localhost:5000/api/tasks/1
+localhost:5000/api/resources/1
+DELETE
+localhost:5000/api/projects/1
+localhost:5000/api/tasks/2
